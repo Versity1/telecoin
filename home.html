@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html data-theme="dark" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeleCoin - Home</title>
+    <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
+    <style>
+        /* Skeleton loading animation */
+        .skeleton {
+            background: linear-gradient(90deg, #1f2937 25%, #374151 50%, #1f2937 75%);
+            background-size: 200% 100%;
+            animation: skeleton-loading 1.5s infinite;
+        }
+        @keyframes skeleton-loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        .hidden {
+            display: none !important;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen bg-base-100">
+
+    <!-- Preloader -->
+    <div id="preloader" class="h-screen flex items-center justify-center bg-base-100">
+        <div class="flex w-52 flex-col gap-4">
+            <div class="skeleton h-32 w-full rounded-lg"></div>
+            <div class="skeleton h-4 w-28 rounded"></div>
+            <div class="skeleton h-4 w-full rounded"></div>
+            <div class="skeleton h-4 w-full rounded"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="content" class="hidden" >
+        <!-- Top Navbar -->
+        <div class="navbar bg-base-100" data-theme="black">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl">Telecoin</a>
+            </div>
+            <div class="flex-none gap-2">
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img alt="User Avatar" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        </div>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li><a>Profile</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- the main contents starts -->
+        <div class="bg-image1 card flex flex-row gap-3 bg-base-100 shadow-xl p-3">
+            <figure class="w-15 h-15 rounded-12 overflow-hidden mb-1">
+              <img
+                src="static/images/logo.webp"
+                alt="Rounded Image"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+            <div class="text-center">
+              <h2 class="card-title text-lg font-bold">Discover New Horizons!</h2>
+              <p class="mt-2 text-sm">Explore a world of exciting possibilities and insights with just one click.</p>
+              <div class="card-actions mt-4">
+                <button class="btn bg-white text-black btn-wide">Get Started</button>
+              </div>
+            </div>
+          </div>
+          
+          
+        <!-- main contents ends -->
+
+        <!-- Footer Navbar -->
+        <div class="fixed bottom-0 w-full bg-base-200 z-50" data-theme="black">
+            <ul class="menu menu-horizontal bg-base-200 rounded-t-lg p-2 flex justify-around">
+                <li>
+                    <a class="tooltip" data-tip="Home">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="tooltip" data-tip="Earn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-3.865 0-7 1.567-7 3.5S8.135 15 12 15s7-1.567 7-3.5S15.865 8 12 8z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15c-3.865 0-7 1.567-7 3.5S8.135 22 12 22s7-1.567 7-3.5-3.135-3.5-7-3.5z" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="tooltip" data-tip="Friends">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10a4 4 0 11-8 0 4 4 0 018 0zM16 18c0 2.5-4 2.5-4 0v-3m4 0a4 4 0 018 0v3c0 2.5-4 2.5-4 0v-3z" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="tooltip" data-tip="Wallet">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16m-7 4h7m-16 0h3" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Hide preloader and show content after page load
+        window.addEventListener("load", function() {
+            document.getElementById("preloader").classList.add("hidden");
+            document.getElementById("content").classList.remove("hidden");
+        });
+    </script>
+</body>
+</html>
