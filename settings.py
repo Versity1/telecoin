@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 env_path = Path('.') / '.env'
+from django.urls import reverse_lazy
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -15,8 +16,11 @@ SECRET_KEY = 'django-insecure-(gdnxqxv0+110at+f7%m_a7v@s=^1#w+lv%f=5w&&qki7jp)dj
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+TELEGRAM_AUTH_REDIRECT_URL = reverse_lazy('home')
 
-
+LOGIN_REDIRECT_URL = 'home'
+LOGIN_URL = 'login'
+LOGOUT_REDIRECT_URL = 'login'
 # Application definition
 
 INSTALLED_APPS = [
